@@ -19,7 +19,7 @@
 <body>  
     全部用户信息：  
     <c:forEach items="${userList}" var="user">  
-        <div>姓名：${user.userName } 性别：${user.gender } <a target="_blank" href="user/user!detail.action?id=${user.id}">用户详情</a></div>  
+        <div>姓名：${user.name } 密码：${user.pwd } <a target="_blank" href="user/user!detail.action?id=${user.id}">用户详情</a></div>  
     </c:forEach>  
   
 </body>  

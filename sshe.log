@@ -35,3 +35,176 @@
 }] of Hibernate SessionFactory for HibernateTransactionManager
 [INFO][2017-08-04 23:15:06,377][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@50b494a6: startup date [Fri Aug 04 23:15:04 CST 2017]; root of context hierarchy
 [INFO][2017-08-04 23:15:06,389][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2017-08-05 15:54:30,230][org.springframework.test.context.support.DefaultTestContextBootstrapper]Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO][2017-08-05 15:54:30,279][org.springframework.test.context.support.DefaultTestContextBootstrapper]Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@cb644e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@13805618, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@56ef9176, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4566e5bd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1ed4004b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ff5b51f]
+[INFO][2017-08-05 15:54:30,612][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2017-08-05 15:54:31,180][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2017-08-05 15:54:31,385][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@50b494a6: startup date [Sat Aug 05 15:54:31 CST 2017]; root of context hierarchy
+[INFO][2017-08-05 15:54:31,994][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[ERROR][2017-08-05 15:54:32,863][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2017-08-05 15:54:33,113][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2017-08-05 15:54:33,999][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[INFO][2017-08-05 15:54:34,033][org.hibernate.Version]HHH000412: Hibernate Core {4.3.5.Final}
+[INFO][2017-08-05 15:54:34,045][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2017-08-05 15:54:34,049][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2017-08-05 15:54:35,163][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2017-08-05 15:54:35,478][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2017-08-05 15:54:35,490][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2017-08-05 15:54:36,655][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2017-08-05 15:54:36,655][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2017-08-05 15:54:36,667][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2017-08-05 15:54:36,695][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: training_test01.user
+[INFO][2017-08-05 15:54:36,695][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [password, id, username]
+[INFO][2017-08-05 15:54:36,695][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-08-05 15:54:36,695][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2017-08-05 15:54:36,695][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2017-08-05 15:54:36,835][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2017-08-05 15:54:32",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:612716569, ConnectTime:"2017-08-05 15:54:35", UseCount:2, LastActiveTime:"2017-08-05 15:54:36"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[WARN][2017-08-05 15:54:37,560][org.hibernate.engine.jdbc.spi.SqlExceptionHelper]SQL Error: 1062, SQLState: 23000
+[ERROR][2017-08-05 15:54:37,560][org.hibernate.engine.jdbc.spi.SqlExceptionHelper]Duplicate entry '0' for key 'PRIMARY'
+[INFO][2017-08-05 15:54:37,564][org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl]HHH000010: On release of batch it still contained JDBC statements
+[INFO][2017-08-05 15:54:37,636][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@50b494a6: startup date [Sat Aug 05 15:54:31 CST 2017]; root of context hierarchy
+[INFO][2017-08-05 15:54:37,660][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2017-08-06 02:13:44,276][org.springframework.test.context.support.DefaultTestContextBootstrapper]Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO][2017-08-06 02:13:44,302][org.springframework.test.context.support.DefaultTestContextBootstrapper]Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@cb644e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@13805618, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@56ef9176, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4566e5bd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1ed4004b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ff5b51f]
+[INFO][2017-08-06 02:13:44,856][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[ERROR][2017-08-06 02:13:45,309][org.springframework.test.context.TestContextManager]Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@56ef9176] to prepare test instance [analytics.TestUserService@45dd4eda]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Unexpected exception parsing XML document from class path resource [spring.xml]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'userDao' for bean class [com.citi.analytics.service.impl.UserDaoImpl] conflicts with existing, non-compatible bean definition of same name and class [com.citi.analytics.dao.impl.UserDaoImpl]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:414)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:252)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadBeanDefinitions(AbstractGenericContextLoader.java:257)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:124)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'userDao' for bean class [com.citi.analytics.service.impl.UserDaoImpl] conflicts with existing, non-compatible bean definition of same name and class [com.citi.analytics.dao.impl.UserDaoImpl]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:320)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:259)
+	at org.springframework.context.annotation.ComponentScanBeanDefinitionParser.parse(ComponentScanBeanDefinitionParser.java:87)
+	at org.springframework.beans.factory.xml.NamespaceHandlerSupport.parse(NamespaceHandlerSupport.java:74)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1411)
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1401)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:172)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:142)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:94)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:508)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:392)
+	... 38 more
+[INFO][2017-08-06 02:25:08,112][org.springframework.test.context.support.DefaultTestContextBootstrapper]Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO][2017-08-06 02:25:08,127][org.springframework.test.context.support.DefaultTestContextBootstrapper]Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@cb644e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@13805618, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@56ef9176, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4566e5bd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1ed4004b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ff5b51f]
+[INFO][2017-08-06 02:25:08,237][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2017-08-06 02:25:08,409][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2017-08-06 02:25:08,487][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@50b494a6: startup date [Sun Aug 06 02:25:08 CST 2017]; root of context hierarchy
+[INFO][2017-08-06 02:25:08,612][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[ERROR][2017-08-06 02:25:08,831][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2017-08-06 02:25:08,909][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2017-08-06 02:25:09,221][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[INFO][2017-08-06 02:25:09,221][org.hibernate.Version]HHH000412: Hibernate Core {4.3.5.Final}
+[INFO][2017-08-06 02:25:09,221][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2017-08-06 02:25:09,221][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2017-08-06 02:25:09,643][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2017-08-06 02:25:09,751][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2017-08-06 02:25:09,751][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2017-08-06 02:25:10,345][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2017-08-06 02:25:10,345][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2017-08-06 02:25:10,345][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2017-08-06 02:25:10,345][java.sql.DatabaseMetaData]HHH000262: Table not found: user
+[INFO][2017-08-06 02:25:10,345][java.sql.DatabaseMetaData]HHH000262: Table not found: user
+[INFO][2017-08-06 02:25:10,345][java.sql.DatabaseMetaData]HHH000262: Table not found: user
+[INFO][2017-08-06 02:25:10,782][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2017-08-06 02:25:10,839][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2017-08-06 02:25:08",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:28145535, ConnectTime:"2017-08-06 02:25:09", UseCount:2, LastActiveTime:"2017-08-06 02:25:10"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2017-08-06 02:25:11,245][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@50b494a6: startup date [Sun Aug 06 02:25:08 CST 2017]; root of context hierarchy
+[INFO][2017-08-06 02:25:11,245][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2017-08-06 02:30:59,106][org.springframework.test.context.support.DefaultTestContextBootstrapper]Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO][2017-08-06 02:30:59,122][org.springframework.test.context.support.DefaultTestContextBootstrapper]Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@cb644e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@13805618, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@56ef9176, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4566e5bd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1ed4004b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ff5b51f]
+[INFO][2017-08-06 02:30:59,223][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring.xml]
+[INFO][2017-08-06 02:30:59,383][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-hibernate.xml]
+[INFO][2017-08-06 02:30:59,445][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@50b494a6: startup date [Sun Aug 06 02:30:59 CST 2017]; root of context hierarchy
+[INFO][2017-08-06 02:30:59,560][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[ERROR][2017-08-06 02:30:59,720][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2017-08-06 02:30:59,806][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2017-08-06 02:31:00,078][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+[INFO][2017-08-06 02:31:00,078][org.hibernate.Version]HHH000412: Hibernate Core {4.3.5.Final}
+[INFO][2017-08-06 02:31:00,093][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2017-08-06 02:31:00,093][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2017-08-06 02:31:00,453][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2017-08-06 02:31:00,546][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2017-08-06 02:31:00,550][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2017-08-06 02:31:01,399][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2017-08-06 02:31:01,407][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2017-08-06 02:31:01,408][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2017-08-06 02:31:01,469][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: training_test01.user
+[INFO][2017-08-06 02:31:01,469][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [modifydatetime, name, id, createdatetime, pwd]
+[INFO][2017-08-06 02:31:01,469][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2017-08-06 02:31:01,469][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2017-08-06 02:31:01,469][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2017-08-06 02:31:01,551][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2017-08-06 02:30:59",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1616438581, ConnectTime:"2017-08-06 02:31:00", UseCount:2, LastActiveTime:"2017-08-06 02:31:01"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2017-08-06 02:31:02,027][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@50b494a6: startup date [Sun Aug 06 02:30:59 CST 2017]; root of context hierarchy
+[INFO][2017-08-06 02:31:02,027][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed

@@ -1,97 +1,135 @@
 package com.citi.analytics.action;
 
- 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.struts2.convention.annotation.Action;
+import org.apache.struts2.convention.annotation.Namespace;
+import org.apache.struts2.convention.annotation.Results;
+import org.apache.struts2.convention.annotation.Result;
+import org.springframework.beans.factory.annotation.Autowired;
+
+
 import com.citi.analytics.entity.User;
 import com.citi.analytics.service.UserService;
-import com.opensymphony.xwork2.ActionSupport;  
-import com.opensymphony.xwork2.ModelDriven;  
-import com.opensymphony.xwork2.Preparable;  
-  
-import java.io.IOException;  
-import java.io.PrintWriter;  
-import java.util.List;  
-  
-import javax.servlet.http.HttpServletResponse;  
-  
-import org.apache.log4j.Logger;  
-import org.apache.struts2.ServletActionContext;  
-import org.apache.struts2.convention.annotation.Namespace;  
-import org.apache.struts2.convention.annotation.ParentPackage;  
-import org.apache.struts2.convention.annotation.Action;  
-import org.apache.struts2.convention.annotation.Result;
-import org.apache.struts2.convention.annotation.Results;
-import org.springframework.beans.factory.annotation.Autowired;  
-  
-@ParentPackage("struts-default")  
-@Namespace("/")  
-//@AllowedMethods("detail")  
+import com.citi.analytics.util.ResultData;
+import com.opensymphony.xwork2.ModelDriven;
+
+@Namespace("/")
 @Results({  
     @Result(name = "success", location = "/user.jsp")  
 })  
-public class UserAction extends ActionSupport implements ModelDriven<User>, Preparable {  
-    private static final long serialVersionUID = -4611010990125262639L;  
-    private static final Logger LOGGER = Logger.getLogger(UserAction.class);  
-    private Integer id;  
-    User user;  
-    List<User> userList;  
-      
-    @Autowired  
-    private UserService userManager;  
-      
-    public Integer getId() {  
-        return id;  
+
+public class UserAction extends BaseAction  implements ModelDriven<User> {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private UserService userService;
+	private User user = new User();
+	List<User> userList;  
+
+	
+	public List<User> getUserList() {
+		return userList;
+	}
+
+	public void setUserList(List<User> userList) {
+		this.userList = userList;
+	}
+
+	@Override
+	public User getModel() {
+		// TODO Auto-generated method stub
+		return user;
+	}
+
+	public UserService getUserService() {
+		return userService;
+	}
+
+	@Autowired
+	public void setUserService(UserService userService) {
+		this.userService = userService;
+	}
+
+	public void reg() {
+		ResultData result = new ResultData();
+		try {
+			userService.save(user);
+			result.setSuccess(true);
+			result.setMsg("register success");
+		} catch (Exception e) {
+			e.printStackTrace();
+			result.setMsg("register fail");
+		}
+		super.writeJson(result);
+	}
+
+	public void login() {
+		ResultData result = new ResultData();
+		User u = userService.login(user);
+		if (u != null) {
+			result.setSuccess(true);
+			result.setMsg("login success");
+		} else{
+			result.setMsg("login fail");
+		}
+			
+		super.writeJson(result);
+	}
+	
+	
+	public void add() {
+		ResultData result = new ResultData();
+		try {
+			User u = userService.save(user);
+			result.setSuccess(true);
+			result.setMsg("add user success");
+			result.setObj(u);
+		} catch (Exception e) {
+			e.printStackTrace();
+			result.setMsg("add user fail");
+		}
+		super.writeJson(result);
+	}
+	public void remove(){
+		userService.remove(user.getId());
+		ResultData result = new ResultData();
+		result.setSuccess(true);
+		result.setMsg("remove success");
+		super.writeJson(result);
+	}
+	public void edit(){
+		ResultData result = new ResultData();
+		User u = userService.edit(user);
+		result.setSuccess(true);
+		result.setMsg("edit success");
+		result.setObj(u);
+		
+		super.writeJson(result);
+	}
+	
+	@Action(value="user")    
+    public String execute() throws Exception {
+		 userList =  new ArrayList<User>();
+    	 User user = new User();  
+         user.setName("fengwusan");  
+         user.setPwd("123456");  
+         User user2 = new User();  
+         user2.setName("fengwusan");  
+         user2.setPwd("123456");  
+         User result =  userService.save(user);
+         User result2 = userService.save(user2);
+         
+         userList.add(result);
+         userList.add(result2);
+         
+         return SUCCESS;  
     }  
-      
-    public void setId(Integer id) {  
-        this.id = id;  
-    }  
-      
-    public User getUser() {  
-        return user;  
-    }  
-      
-    public void setUser(User user) {  
-        this.user = user;  
-    }  
-      
-    public List<User> getUserList() {  
-        return userList;  
-    }  
-      
-    public void setUserList(List<User> userList) {  
-        this.userList = userList;  
-    }  
-      
-    @Override  
-    public void prepare() throws Exception {  
-          
-    }  
-  
-    @Override  
-    public User getModel() {  
-        if (null != id) {  
-            user = userManager.get(id);  
-        } else {  
-            user = new User();  
-        }  
-        return user;  
-    }  
-      
-    @Override  
-    public String execute() throws Exception {  
-        LOGGER.info("查询所有用户");  
-        userList = userManager.findAll();  
-        return SUCCESS;  
-    }  
-  
-//    public void detail() throws IOException {  
-//        String id = ServletActionContext.getRequest().getParameter("id");  
-//        LOGGER.info("查询用户详情：" + id);  
-//        user = userManager.get(Integer.valueOf(id));  
-//        //AjaxUtil.ajaxJSONResponse(user);  
-//        HttpServletResponse response = ServletActionContext.getResponse();  
-//        PrintWriter out = response.getWriter();  
-//        out.println("Hello " + user.getUserName());  
-//    }  
-  
-}  
+
+
+	
+
+}
