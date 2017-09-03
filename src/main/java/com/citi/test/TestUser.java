@@ -61,4 +61,8 @@ public class TestUser {
         List<UserCount> userCounts = userDaoImpl.Select();
         System.out.println(userCounts.size());
     }
+    @Test
+    public void testGit(){
+
+    }
 }
