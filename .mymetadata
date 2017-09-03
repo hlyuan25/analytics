@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="analytics Maven Webapp"
+  id="myeclipse.1502359907011"
+  context-root="/analytics"
+  j2ee-spec="1.7"
+  archive="analytics Maven Webapp.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+

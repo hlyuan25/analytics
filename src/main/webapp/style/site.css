@@ -1,0 +1,64 @@
+
+#daohang{
+	background-color:#DDDDDD;
+}
+
+#mod1{
+	border: solid 1px #000;
+	border-radius:5px;
+	color: #202020;
+	margin: 20px  0;
+	padding: 20px;
+	border-color:lightgray;
+}
+
+#symb-search{
+	margin: 20px  0;
+	padding: 60px;
+}
+
+#searchresult  
+    {  
+        width: 140px;  
+        position: absolute;  
+        z-index: 1;  
+        overflow: hidden;  
+        left: 140px;  
+        top: 71px;  
+        background: #E0E0E0;  
+        border-top: none;  
+        
+    }  
+    #txt_search
+    {
+    	
+       font-size:15px;
+       height:20px;
+    }
+
+    #txt_input1{
+
+    	position: absolute;
+  		
+  		top: 50px;
+    	
+    
+    }
+
+    .line  
+    {  
+        font-size: 15px;  
+        background: #E0E0E0;  
+        width: 140px;  
+        padding:0px;  
+    }  
+    .hover  
+    {  
+        background: #007ab8;  
+        width: 140px;  
+        color: #fff;  
+    }  
+    .std  
+    {  
+        width: 150px;  
+    }  
