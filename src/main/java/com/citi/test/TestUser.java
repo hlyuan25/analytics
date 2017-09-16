@@ -28,24 +28,7 @@ public class TestUser {
     }
 
 
-    @Test
-    public void testAdd()
-    {
 
-        //添加一百个user
-        for(int i=0;i<100;i++){
-            User user =new User();
-            user.setId(""+i);
-            user.setAge(i);
-            user.setName("zcy"+i);
-            user.setPassword("zcy"+i);
-            userDaoImpl.insert(user,collectionName);
-        }
-        Map<String,Object> params=new HashMap<String,Object>();
-        params.put("maxAge", 50);
-        List<User> list=userDaoImpl.findAll(params,collectionName);
-        System.out.println("user.count()=="+list.size());
-    }
     @Test
     public void testSelect(){
 

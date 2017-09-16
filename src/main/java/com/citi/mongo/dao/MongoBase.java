@@ -4,16 +4,16 @@ import java.util.List;
 import java.util.Map;
 
 public interface MongoBase <T>{
-    //添加
+    //insert
     public void insert(T object,String collectionName);
-    //根据条件查找
+    //find one
     public T findOne(Map<String,Object> params, String collectionName);
-    //查找所有
+    //find all
     public List<T> findAll(Map<String,Object> params, String collectionName);
-    //修改
+    //update
     public void update(Map<String,Object> params,String collectionName);
-    //创建集合
+    //create
     public void createCollection(String collectionName);
-    //根据条件删除
+    //delete
     public void remove(Map<String,Object> params,String collectionName);
 }
